@@ -1,6 +1,6 @@
 $main-bg: linear-gradient(180deg, rgba(126, 82, 160, 1) 5%, rgba(0, 0, 0, 1) 80%);
 $color-test: rgb(78, 52, 97);
-
+$enable-responsive-font-sizes: true;
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@ $color-test: rgb(78, 52, 97);
 }
 
 html {
-    font-size: 62.5%;
+    // font-size: 62.5%;
     width: 100%;
     height: 100%;
     font-family: 'Lato', sans-serif;
@@ -32,7 +32,6 @@ body {
             text-align: center;
 
             .bi {
-                font-size: 200%;
                 color: #fff;
             }
         }
@@ -65,51 +64,75 @@ body {
     }
 }
 
-.espaco-top {
-    height: 82px;
+h1 {
+    font-size: clamp(1.5rem, 1rem + 1vw, 2rem);
+    font-weight: bold;
+}
+
+p {
+    font-size: clamp(.8rem, .1rem + 1vw, 2rem);
 }
 
 .container {
     font-family: 'Lato', sans-serif;
     font-size: 25px;
 
-    h1 {
-        font-size: 50px;
-        font-weight: bold;
+    .row {
+        padding: 82px 50px;
+    }
+
+
+
+    .bloco-par {
+        background-color: rgb(243, 243, 243);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
 
     .apresentacao {
         background-color: rgb(255, 255, 255);
         overflow: hidden;
 
-        .logo {
-            font-family: 'Lobster', cursive;
-            font-size: 120px;
-            color: #7e52a0;
-            text-align: center;
-            margin: 20px 0 50px 0;
-        }
 
-        .img-fluid {
-            margin-bottom: -10px;
+        .col-12 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .logo {
+                text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+                font-family: 'Lobster', cursive;
+                font-size: clamp(5rem, 5rem + 3vw, 8.7rem);
+                color: #7e52a0;
+                text-align: center;
+                margin: 20px 0 50px 0;
+            }
+
+            .img-fluid {
+                margin: 0 0 -96px 30px;
+                min-width: 515px;
+                // min-width: 460px;
+                // min-height: 265.92px;
+
+            }
         }
     }
 
     .projeto {
-
-        background-color: rgb(243, 243, 243);
-        padding: 82px 50px;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
         .responsabilidades {
-            span {
-                font-size: 30px;
-                font-weight: bold;
+            b {
+                font-size: clamp(1.2rem, .5rem + 1vw, 3rem);
+
             }
 
             .designed {
                 display: flex;
                 align-items: center;
+
+                p {
+                    font-size: clamp(1.2rem, .5rem + 1vw, 3rem);
+
+                }
 
                 .perfil {
                     display: flex;
@@ -145,7 +168,6 @@ body {
     .desafios {
         background-color: #fff;
         margin-top: 8px;
-        padding: 82px 50px;
 
         ol {
             li {
@@ -153,7 +175,7 @@ body {
                 font-weight: bold;
                 margin: 10px 0;
 
-                span {
+                p {
                     color: #000;
                     font-weight: normal;
 
@@ -161,6 +183,59 @@ body {
             }
         }
     }
+
+    .publico {
+        .personas {
+            h1 {
+                margin-top: 50px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .row {
+                padding: 30px 0 0 0;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .perfil-usuario {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                border-radius: 1%;
+                padding: 10px 20px;
+                max-width: 390px;
+                transition: transform .2s linear;
+                background-color: #fff;
+
+                img {
+                    max-width: 60%;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                .nome-usuario {
+                    font-size: clamp(1.2rem, .5rem + 1vw, 3rem);
+                    text-align: center;
+                }
+
+                p {
+                    span {
+                        font-weight: bold;
+                        color: #7e52a0;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-10px);
+                    box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
+                    transition: transform .2s linear;
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -170,7 +245,24 @@ body {
 
 
 
+@media (max-width: 1399px) {
+    .publico {
+        .personas {
+            .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
+                .perfil-usuario {
+                    max-width: 500px;
+                    margin-bottom: 20px;
+
+                }
+            }
+
+        }
+    }
+}
 
 @media (max-width: 1199px) and (min-width: 992px) {
     .container-fluid {
