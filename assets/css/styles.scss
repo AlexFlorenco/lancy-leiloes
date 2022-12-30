@@ -236,6 +236,70 @@ p {
         }
     }
 
+    .jornada {
+        .img-jornada {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 750px;
+                min-width: 350px;
+            }
+        }
+    }
+
+    .wireflow {
+        #gallery-modal {
+            .modal-lg {}
+
+            .modal-body {
+                display: flex;
+                justify-content: center;
+
+                .modal-img {
+                    width: 60%;
+                }
+            }
+        }
+
+        .col {
+            .wireframe-papel {
+                text-align: center;
+
+                h1 {
+                    margin-top: 50px;
+                }
+
+                .pack-wireframes {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    padding: 30px 0;
+
+                    img {
+                        width: 10vw;
+                        min-width: 120px;
+                        margin-top: 4px;
+                        transition: transform .2s linear;
+
+                        &:hover:not(.seta) {
+                            cursor: pointer;
+                            transform: translateY(-10px);
+                            box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
+                            transition: transform .2s linear;
+                        }
+                    }
+
+                    .seta {
+                        width: 5vw;
+                        max-height: 10rem;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -302,6 +366,13 @@ p {
                 margin-left: 79vw;
             }
 
+        }
+    }
+
+
+    .wireframe-papel {
+        .pack-wireframes {
+            justify-content: space-between;
         }
     }
 

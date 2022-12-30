@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lancy Leilões</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap"
@@ -32,9 +33,9 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="#projeto">Projeto</a>
                     <a class="nav-link" href="#desafios">Desafios</a>
                     <a class="nav-link" href="#publico">Público</a>
+                    <a class="nav-link" href="#jornada">Jornada</a>
                     <a class="nav-link" href="#wireflow">Wireflow</a>
                     <a class="nav-link" href="#iteracao">Iteração</a>
                     <a class="nav-link" href="#aprendizado">Aprendizado</a>
@@ -52,7 +53,7 @@
             </div>
         </div>
 
-        <div class="row projeto bloco-par" id="projeto">
+        <div class="row projeto bloco-par">
             <div class="col-md-12 col-xl-6 descricao">
                 <h1>Projeto</h1>
                 <p>O aplicativo <strong>Lancy Leilões</strong> é uma plataforma voltada tanto para a realização quanto
@@ -189,22 +190,106 @@
             </div>
         </div>
 
-        <div class="row wireflow" id="wireflow">
+        <div class="row jornada" id="jornada">
             <div class="col">
-                <h1>wireflow</h1>
+                <h1>A Jornada do Usuário</h1>
+                <p>Construir um fluxo de usuário de uma jornada básica do início ao fim durante a compra em um
+                    leilão auxiliou no entendimento de como os usuários podem interagir com o produto, além de permitir
+                    ver a navegação pelos objetivos do usuário.
+                </p>
+                <div class="img-jornada">
+                    <img class="img-fluid" src="./assets/img/jornada-usuario.png" alt="">
+                </div>
             </div>
         </div>
-        <div class="row iteracao bloco-par" id="iteracao">
+
+        <div class="row wireflow bloco-par" id="wireflow">
+            <div class="col">
+                <h1>Wireflow</h1>
+                <p>Fazer wireframes forneceu uma excelente visão geral do design, da organização visual e do
+                    planejamento do projeto, pois é nesse momento em que se define como tudo será feito e também como se
+                    consertam possíveis falhas.
+                </p>
+
+                <div class="wireframe-papel">
+                    <h1>Idealização da Tela Principal</h1>
+
+                    <div class="pack-wireframes gallery">
+                        <img class="img-fluid gallery-item" src="./assets/img/wireframes-papel/wireframe-papel-1.png"
+                            alt="">
+                        <img class="img-fluid gallery-item" src="./assets/img/wireframes-papel/wireframe-papel-2.png"
+                            alt="">
+                        <img class="img-fluid gallery-item" src="./assets/img/wireframes-papel/wireframe-papel-3.png"
+                            alt="">
+                        <img class="img-fluid gallery-item" src="./assets/img/wireframes-papel/wireframe-papel-4.png"
+                            alt="">
+                        <img class="img-fluid gallery-item" src="./assets/img/wireframes-papel/wireframe-papel-5.png"
+                            alt="">
+                    </div>
+                    <p>Depois de esboçar alguns wireframes e pensar no fluxo preliminar, foi necessário revisar o que
+                        era
+                        necessário, desnecessário e quais áreas precisavam de melhorias. Foi dedicado muito tempo
+                        a essa etapa para garantir os retoques finais no UX subjacente antes de passar para o visual.
+
+                    </p>
+                    <h1>Do Wireframe ao Mockup</h1>
+                    <div class="pack-wireframes gallery">
+                        <img class="border border-dark img-fluid gallery-item" src="./assets/img/wireframe-papel.png"
+                            alt="">
+                        <img class="seta img-fluid" src="./assets/img/seta.png" alt="">
+                        <img class="border border-dark img-fluid gallery-item" src="./assets/img/wireframe-home.png"
+                            alt="">
+                        <img class="seta img-fluid" src="./assets/img/seta.png" alt="">
+
+                        <img class="border border-dark img-fluid gallery-item" src="./assets/img/hifi-home.png" alt="">
+                    </div>
+                    <h4><b>Acesse o protótipo de baixa fidelidade <a
+                                href="https://www.figma.com/file/uBAdhlc0mgS1rayhtkVXCu/Lancy-Leil%C3%B5es?node-id=0%3A1&t=uejDmIuhDFgcPnsH-1"
+                                target="_blank" style="color: #7e52a0">clicando aqui</a></b>
+                        </h2>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header" style="height: 40px;">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./assets/img/wireframes-papel/wireframe-papel-1.png" class="modal-img" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row iteracao" id="iteracao">
             <div class="col">
                 <h1>iteracao</h1>
             </div>
         </div>
-        <div class="row aprendizado" id="aprendizado">
+        <div class="row aprendizado bloco-par" id="aprendizado">
             <div class="col">
                 <h1>aprendizado</h1>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("gallery-item")) {
+                const src = e.target.getAttribute("src");
+                document.querySelector(".modal-img").src = src;
+                const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
+                myModal.show();
+            }
+        })
+    </script>
 
 </body>
 
