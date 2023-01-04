@@ -250,8 +250,6 @@ p {
 
     .wireflow {
         #gallery-modal {
-            .modal-lg {}
-
             .modal-body {
                 display: flex;
                 justify-content: center;
@@ -300,6 +298,51 @@ p {
         }
     }
 
+    .iteracao {
+        justify-content: center;
+
+        .estudo-usabilidade {
+            max-width: 950px;
+
+            table,
+            tr,
+            th,
+            td {
+                border: 1px solid #000;
+                padding: 0 5px;
+            }
+        }
+
+        table {
+            font-size: 20px;
+
+            td {
+                text-align: center;
+
+            }
+
+            .cabecalho {
+                font-weight: bold;
+                background-color: #f3f3f3;
+                text-align: center;
+            }
+
+            .opiniao {
+                color: #d0221f;
+            }
+
+            .solicitacoes {
+                color: #1967d2;
+            }
+
+            .atitude {
+                color: #188038;
+            }
+        }
+
+
+
+    }
 }
 
 
@@ -307,6 +350,13 @@ p {
 
 
 
+@media (max-width: 1200px) {
+    .iteracao {
+        table {
+            font-size: 15px !important;
+        }
+    }
+}
 
 
 @media (max-width: 1399px) {
